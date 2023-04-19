@@ -1,19 +1,28 @@
-import './App.css';
-import {Routes, Route} from "react-router-dom";
-import Home from "./components/Home/Home";
-import Location from "./components/Location/LocationList";
-import Apropos from './components/Apropos/Apropos';
-import Navbar from './components/Navbar/Navbar';
+import { Routes, Route} from "react-router-dom";
+import Home from "./pages/Home";
+import Location from "./pages/LocationList";
+import Apropos from './pages/Apropos';
+import Error from './pages/Error';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/LocationList/:id' element={<Location/>}/>
-        <Route path='/Apropos' element={<Apropos/>}/>
-      </Routes>
+     
+        <Routes>
+          <Route element={<Layout/>}>
+           
+            <Route path='/' element={<Home/>}/>
+            <Route path='/Apropos' element={<Apropos/>}/>
+            <Route path='/LocationList/:id' element={<Location/>}/>
+
+            <Route path='*' element={<Error/>}/>
+
+          </Route>
+
+          
+        </Routes>
+  
     </div>
   );
 }
