@@ -1,0 +1,12 @@
+.Gallery {
+  display: grid;
+  background: #F7F7F7;
+  border-radius: 25px;
+  width: 100%; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+  

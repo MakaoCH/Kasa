@@ -1,20 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import styles from './Header.module.css';
 
 import Logo from '../../assets/logo-kasa.png'; // import de l'image
+import Navbar from '../Navbar/Navbar';
 
 
 const Header = () => {
     return (
-        <div className='Header'>
+        <div className={styles.Header}>
             <header>
                 <img src={Logo} alt="Logo" /> {/* Utilisation de l'image importée */}
-                <nav>
-                    <ul>
-                        <li><Link to="/">Accueil</Link></li>
-                        <li><Link to="/Apropos">A propos</Link></li>
-                    </ul>
-                </nav>
+                <Navbar />
                 
             </header>
        </div>

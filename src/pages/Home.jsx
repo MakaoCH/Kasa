@@ -1,11 +1,11 @@
 import React from 'react'
-import Location from './LocationList';
+import Gallery from '../components/Gallery/Gallery';
 
 
 const Home = () => {
     return (
         <div className='Home'>
-           <Location/>
+           <Gallery/>
         </div>
     );
 };

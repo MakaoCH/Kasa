@@ -1,0 +1,42 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-items: center;
+    height: 100%;
+    text-decoration-line: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color:#FF6060;
+    font-weight: 500;
+    font-size: 24px;
+}
+.active a {
+    text-decoration-line: underline;
+  }
+  
+
+
+@media screen and (max-width: 500px){
+    li {
+        text-transform: uppercase;
+        margin-left: 10px;
+        
+    }
+    a {
+        font-size: 12px;
+    }
+
+}

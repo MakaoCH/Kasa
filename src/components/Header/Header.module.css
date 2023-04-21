@@ -1,0 +1,14 @@
+.Header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.Header img {
+    width: 100%; /* Ajouter cette ligne pour que l'image s'adapte à la taille de l'écran */
+    max-width: 200px; /* Ajouter cette ligne pour définir la largeur maximale de l'image */
+    height: auto; /* Ajouter cette ligne pour que la hauteur de l'image soit calculée automatiquement en fonction de la largeur */
+}

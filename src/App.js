@@ -4,10 +4,11 @@ import Location from "./pages/LocationList";
 import Apropos from './pages/Apropos';
 import Error from './pages/Error';
 import Layout from './components/Layout';
+import styles from './index.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
      
         <Routes>
           <Route element={<Layout/>}>
