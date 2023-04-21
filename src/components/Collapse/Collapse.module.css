@@ -1,0 +1,49 @@
+.collapse {
+    border-radius: 5px;
+    margin-bottom: 35px;
+    text-align: left;
+  }
+  
+  .collapseHeader {
+    align-items: center;
+    background-color: #ff6060;
+    border-radius: 5px;
+    display: flex;
+    height: 50px;
+    min-height: 50px;
+    width: 100%;
+  }
+  
+  .collapseTitle {
+    color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px 10px;
+  }
+  
+  .collapseArrow {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    width: 100%;
+  }
+  
+  .collapseArrow:hover {
+    cursor: pointer;
+  }
+  
+  .rotateArrow {
+    justify-content: flex-start;
+    transform: rotate(-180deg);
+  }
+  
+  .collapseContent {
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #ff6060;
+    height: calc(100% - 50px);
+    min-height: 100px;
+    padding: 25px 10px 10px 10px;
+  }
+  
