@@ -1,0 +1,39 @@
+.Error {
+    text-align: center
+  }
+  
+  .ErrorTitle {
+    color: #ff6060;
+    font-weight: 700;
+    font-size: 288px;
+    margin: auto;
+    padding: 50px;
+  }
+  
+  .ErrorInfo {
+    color: #ff6060;
+    display: block;
+    font-weight: 500;
+    font-size: 36px;
+  }
+  
+  .ErrorRetour {
+    display: block;
+    margin-top: 150px;
+    padding: 100px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  @media screen and (max-width: 1490px) {
+    .ErrorTitle {
+      font-size: 96px;
+    }
+    
+    .ErrorInfo  {
+      font-size: 18px;
+    }
+    .ErrorRetour {
+      font-size: 14px;
+    }
+  }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import styles from './LocationList.module.css';
+
 import Slideshow from '../components/Slideshow/Slideshow';
 import data from '../utils/logements.json';
 
@@ -12,13 +12,8 @@ const LocationsList = () => {
   const images = accommodation ? accommodation.pictures : [];
 
   return (
-    <div className={styles.LocationList}>
-      <Slideshow 
-        key={id} 
-        id={id}
-        pictures={images}
-          
-      />
+    <div>
+      <Slideshow key={id} id={id} pictures={images}/>
     </div>
   );
 };
