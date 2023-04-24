@@ -8,17 +8,18 @@ const Collapse = ({title, content}) => {
 
   return(
 
-    <div className={styles.collapse}  id={`Collapse-${title}`}>
-        
-      <div className={styles.collapseHeader}>
+    <div className={styles.collapse}>
 
-        <div className={styles.collapseTitle}>{title}</div>
-            <span className={styles.collapseArrow}  onClick={() => setToggle(!toggle)}>
-            <img className={toggle ? styles.rotateArrow : ''} src={arrow} alt="Ouvrir cette liste"/>
-            </span>
-      </div>
+        <h3 className={styles.collapseTitle} onClick={() => setToggle(!toggle)}>
+        {title}
+          <img className={toggle ? `${styles.collapseArrow} ${styles.rotateArrow}` : `${styles.arrow}`} 
+          src={arrow} 
+          alt="Ouvrir la liste"/>
+        </h3>
 
-      {toggle && <div className={styles.collapseContent}>{content}</div>}
+        {toggle && <div className={styles.collapseContent}>{content}
+
+      </div>}
 
     </div>
   );

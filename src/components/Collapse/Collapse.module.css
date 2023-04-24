@@ -1,31 +1,25 @@
 .collapse {
     border-radius: 5px;
     margin-bottom: 35px;
-    text-align: left;
-  }
-  
-  .collapseHeader {
-    align-items: center;
     background-color: #ff6060;
-    border-radius: 5px;
-    display: flex;
-    height: 50px;
-    min-height: 50px;
-    width: 100%;
   }
   
   .collapseTitle {
-    color: #ffffff;
     height: 50px;
-    line-height: 50px;
-    margin: 5px 10px;
+    color: #ffffff;
+    line-height: 20px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .collapseArrow {
     display: flex;
     justify-content: flex-end;
     margin-right: 10px;
-    width: 100%;
   }
   
   .collapseArrow:hover {

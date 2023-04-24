@@ -12,6 +12,7 @@ const Gallery = () => {
           id={item.id}
           title={item.title}
           cover={item.cover}
+          
         />
       ))}
     </div>
