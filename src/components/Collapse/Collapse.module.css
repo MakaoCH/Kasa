@@ -1,14 +1,16 @@
-.collapse {
+  .collapseBlock {
     border-radius: 5px;
-    margin-bottom: 35px;
-    background-color: #ff6060;
+    background-color: #ff6060; 
+    width: 80%;  
+    margin: auto;
+    padding: 0px 10px 0px 10px;
   }
   
   .collapseTitle {
-    height: 50px;
+    width: 100%;
+    height: 47px;
     color: #ffffff;
-    line-height: 20px;
-    margin: 10px;
+    margin-bottom: 31px;
     font-weight: 500;
     font-size: 24px;
     display: flex;
@@ -19,7 +21,7 @@
   .collapseArrow {
     display: flex;
     justify-content: flex-end;
-    margin-right: 10px;
+    
   }
   
   .collapseArrow:hover {
@@ -27,17 +29,31 @@
   }
   
   .rotateArrow {
-    justify-content: flex-start;
     transform: rotate(-180deg);
   }
   
   .collapseContent {
     background-color: #f6f6f6;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    color: #ff6060;
+    width: 80%;
+    border-radius: 0px 0px 5px 5px;
     height: calc(100% - 50px);
-    min-height: 100px;
-    padding: 25px 10px 10px 10px;
+    padding: 10px;
+    min-height: 75px;
+    margin: auto;
+    margin-top: -31px;
+    margin-bottom: 31px;
   }
   
+
+  @media screen and (max-width: 1490px) {
+    .collapseBlock {
+      
+      width: auto;  
+      
+    }
+    .collapseContent {
+      
+      width: 100%;
+      
+    }
+  }

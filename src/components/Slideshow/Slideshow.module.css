@@ -37,10 +37,12 @@
 
 .slideArrow.left {
   left: 20px;
+  transform: rotate(-180deg) translateY(40%);
 }
 
 .slideArrow.right {
   right: 20px;  
+  
 }
 
 .buttons {

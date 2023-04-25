@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Slideshow.module.css';
+import arrow from '../../assets/arrow-slide.png';
 
 
 const Slideshow = ({ pictures }) => {
@@ -29,8 +30,8 @@ const Slideshow = ({ pictures }) => {
         ))}
         {images.length > 1 &&
           <>
-            <div className={`${styles.slideArrow} ${styles.left}`} onClick={prevImage}>{'<'}</div>
-            <div className={`${styles.slideArrow} ${styles.right}`} onClick={nextImage}>{'>'}</div>
+            <img className={`${styles.slideArrow} ${styles.left}`} src={arrow} alt="previous" onClick={prevImage}/>
+            <img className={`${styles.slideArrow} ${styles.right}`} src={arrow} alt="next" onClick={nextImage}/>
             <div className={styles.slideNumber}>{currentImage + 1}/{images.length}</div>
           </>
         }
@@ -41,4 +42,3 @@ const Slideshow = ({ pictures }) => {
 };
 
 export default Slideshow;
-

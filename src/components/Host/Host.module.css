@@ -1,0 +1,21 @@
+.hostContainer {
+    display: flex;
+    align-items: center;
+}
+
+.hostImg {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 64px; 
+    height: 64px;
+}
+  
+.hostName {
+    width: 93px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: right;
+    margin-right:10px ;
+    width: calc(100% - 100px); /* 100px est la largeur de l'image */
+}
+  

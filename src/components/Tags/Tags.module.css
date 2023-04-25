@@ -1,0 +1,17 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .tagText {
+    background-color:#FF6060;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
