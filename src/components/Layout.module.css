@@ -1,0 +1,14 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+    
+}
+
+header {
+    width: 80%;
+}
+
+.layoutMain {
+    width: 80%;
+    margin: auto;
+}
