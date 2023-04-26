@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Location from "./pages/LocationList";
 import Apropos from './pages/Apropos';
 import Error from './pages/Error';
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 
 
 function App() {
