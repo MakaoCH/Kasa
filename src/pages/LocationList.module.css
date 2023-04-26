@@ -1,0 +1,21 @@
+.collapseLocationList {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .collapseLocationList > * {
+    flex-basis: 48%;
+  }
+  
+.blockUnderSlide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ratingHost {
+    display: flex;
+    flex-direction: column-reverse;
+}

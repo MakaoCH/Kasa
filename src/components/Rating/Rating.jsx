@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './Rating.module.css';
+import starRed from '../../assets/star-red.png';
+import starGrey from '../../assets/star-grey.png';
 
 const Rating = ({ rating }) => {
   const numberStars = 5;
   const stars = [];
 
   for (let i = 1; i <= numberStars; i++) {
-    const starClass = i <= rating ? styles['star-red'] : styles['star'];
-    stars.push(<span key={i} className={`${styles['star']} ${starClass}`}>★</span>);
+    const starImage = i <= rating ? starRed : starGrey;
+    stars.push(<span key={i} className={styles.star}><img src={starImage} alt="star" /></span>);
+
   }
 
   return (

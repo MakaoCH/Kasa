@@ -6,6 +6,7 @@ import Rating from '../components/Rating/Rating';
 import Host from '../components/Host/Host';
 import Tags from '../components/Tags/Tags';
 import Collapse from '../components/Collapse/Collapse';
+import styles from './LocationList.module.css'
 
 const LocationsList = () => {
   const { id } = useParams();
@@ -16,14 +17,25 @@ const LocationsList = () => {
   return (
     <div>
       <Slideshow key={id} id={id} pictures={pictures} />
-      <h1>{title}</h1>
-      <p>{location}</p>
-      <Tags tags={tags} />
-      {rating && <Rating rating={parseInt(rating)} />}
-      <Host name={hostData.name} picture={hostData.picture} />
+
+      <div className={styles.blockUnderSlide}>
+        <div className={styles.titleLocationTag}>
+          <h1>{title}</h1>
+          <p>{location}</p>
+          <Tags tags={tags} />
+        </div>
+
+        <div className={styles.ratingHost}>
+          {rating && <Rating rating={parseInt(rating)} />}
+          <Host name={hostData.name} picture={hostData.picture} />
+        </div>
       
-      <Collapse title="Description" content={description} />
-      <Collapse title="Equipements" content={equipments} />   
+      </div>
+      
+      <div className={styles.collapseLocationList}>
+        <Collapse title="Description" content={description} />
+        <Collapse title="Equipements" content={equipments} />   
+      </div>
 
       
     </div>

@@ -1,7 +1,6 @@
   .collapseBlock {
     border-radius: 5px;
-    background-color: #ff6060; 
-    width: 80%;  
+    background-color: #ff6060;  
     margin: auto;
     padding: 0px 10px 0px 10px;
   }
@@ -22,6 +21,7 @@
     display: flex;
     justify-content: flex-end;
     
+    
   }
   
   .collapseArrow:hover {
@@ -34,7 +34,6 @@
   
   .collapseContent {
     background-color: #f6f6f6;
-    width: 80%;
     border-radius: 0px 0px 5px 5px;
     height: calc(100% - 50px);
     padding: 10px;
