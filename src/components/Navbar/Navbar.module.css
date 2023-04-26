@@ -30,7 +30,7 @@ a {
 
 
 @media screen and (max-width: 500px){
-    li {
+    .active li {
         text-transform: uppercase;
         margin-left: 10px;
         

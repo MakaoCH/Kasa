@@ -33,10 +33,10 @@ const LocationsList = () => {
       </div>
       
       <div className={styles.collapseLocationList}>
-        <Collapse title="Description" content={description} />
-        <Collapse title="Equipements" content={equipments.map(equipement => <li className={styles.equipements} key={equipement}>{equipement}</li>)} />
+        <Collapse titleClassName={styles.title} contentClassName={styles.content} title="Description" content={description} />
+        <Collapse titleClassName={styles.title} contentClassName={styles.content} title="Equipements" content={equipments.map(equipement => <li key={equipement}>{equipement}</li>)} />
       </div>
-      
+
     </div>
   );
 };

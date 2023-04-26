@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
   }
   
 .collapseLocationList > * {
@@ -16,19 +16,59 @@
     margin-bottom: 50px;
 }
 
+.titleLocationTag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titleLocationTag h1 {
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+}
+
+.titleLocationTag p {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+}
+
 .ratingHost {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
 }
 
-.equipements {
-    margin-top: 10px;
-    list-style-type: none;
-    font-weight: 400;
+.title {
+    font-weight: 500;
     font-size: 18px;
-    padding-left: 5px;
   }
   
+.content {
+    font-weight: 400;
+    font-size: 18px;
+    list-style-type: none;
+  }
+
+
+  @media screen and (max-width: 650px) {
+    .blockUnderSlide {
+        display: flex;
+        flex-direction: column;
+      
+        
+    }
+    .ratingHost {
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+    }
+    .collapseLocationList {
+        display: flex;
+        flex-direction: column;
+      }
+  }
+
 
   

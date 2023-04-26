@@ -3,6 +3,7 @@
     background-color: #ff6060;  
     margin: auto;
     padding: 0px 10px 0px 10px;
+    
   }
   
   .collapseTitle {
@@ -10,18 +11,16 @@
     height: 47px;
     color: #ffffff;
     margin-bottom: 31px;
-    font-weight: 500;
-    font-size: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 400;
+    font-size: 24px;
   }
   
   .collapseArrow {
     display: flex;
     justify-content: flex-end;
-    
-    
   }
   
   .collapseArrow:hover {
@@ -33,6 +32,9 @@
   }
   
   .collapseContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: #f6f6f6;
     border-radius: 0px 0px 5px 5px;
     height: calc(100% - 50px);
@@ -41,10 +43,13 @@
     margin: auto;
     margin-top: -31px;
     margin-bottom: 31px;
+    font-weight: 400;
+    font-size: 24px;
+    
   }
   
 
-  @media screen and (max-width: 1490px) {
+  @media screen and (max-width: 650px) {
     .collapseBlock {
       
       width: auto;  
@@ -52,7 +57,7 @@
     }
     .collapseContent {
       
-      width: 100%;
+      width: auto;
       
     }
   }
