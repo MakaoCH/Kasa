@@ -3,6 +3,8 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 50px; 
+    font-weight: 500;
+    font-size: 18px;
   }
   
 .collapseLocationList > * {
@@ -40,14 +42,8 @@
     justify-content: space-between;
 }
 
-.title {
-    font-weight: 500;
-    font-size: 18px;
-  }
-  
-.content {
-    font-weight: 400;
-    font-size: 18px;
+
+li {
     list-style-type: none;
   }
 

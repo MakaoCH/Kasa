@@ -1,5 +1,6 @@
 import React from 'react';
 import Collapse from '../components/Collapse/Collapse';
+import styles from './Apropos.module.css';
 
 const Apropos = () => {
 
@@ -26,17 +27,17 @@ const Apropos = () => {
 		}
 	]
     return (
-        <div>
-			{AproposData.map(data => {
-					return (
-						<div key={data.id}>
-							<Collapse title={data.title} content={data.content} />
-						</div>
-					)}
-				)}
-
-        </div>
-    );
-};
+		<div>
+		{AproposData.map(data => (
+		  <div key={data.id} className={styles.collapse}>
+			<Collapse 
+			  title={<h3 className={styles.title}>{data.title}</h3>} 
+			  content={<div className={styles.content}>{data.content}</div>}
+			/>
+		  </div>
+		))}
+	  </div>
+	);
+  };
 
 export default Apropos;
