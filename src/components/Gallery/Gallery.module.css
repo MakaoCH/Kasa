@@ -3,9 +3,27 @@
   background: #F7F7F7;
   border-radius: 25px;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  padding: 50px;
+  gap: 40px;
+  padding: 40px;
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1080px) {
+  .Gallery {
+    grid-template-columns:  repeat(2, 1fr);
+    gap: 25px;
+    padding: 25px;
+  }
   
+}
+
+@media screen and (max-width: 650px) {
+  .Gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    background:white;
+
+  }
+  
+}

@@ -1,13 +1,19 @@
-import React from 'react'
+import React from 'react';
 import Gallery from '../components/Gallery/Gallery';
+import useFetch from '../utils/useFetch';
 
-
-const Home = () => {
-    return (
-        <div className='Home'>
-           <Gallery/>
-        </div>
-    );
+const HomePage = () => {
+  
+  const { data, hasError, errorType, isLoading } = useFetch("./logements.json");
+  return (
+    <div><Gallery
+      data={data}
+      hasError={hasError}
+      errorType={errorType}
+      isLoading={isLoading}
+      />
+    </div>
+  );
 };
 
-export default Home;
+export default HomePage;

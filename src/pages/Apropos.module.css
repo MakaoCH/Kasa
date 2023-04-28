@@ -4,7 +4,7 @@
 }
 
 .title {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 24px;
 }
   
@@ -15,6 +15,15 @@
 
 @media screen and (max-width: 650px) {
     .collapse {
-      width: auto;  
-  }
+        width: auto;  
+    }
+    .title {
+        font-weight: 500;
+        font-size: 14px;
+    }
+  
+    .content {
+        font-weight: 400;
+        font-size: 14px;
+    }
 }

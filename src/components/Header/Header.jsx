@@ -1,7 +1,5 @@
 import React from 'react';
-
 import styles from './Header.module.css';
-
 import Logo from '../../assets/logo-kasa.png'; // import de l'image
 import Navbar from '../Navbar/Navbar';
 

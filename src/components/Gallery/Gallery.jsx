@@ -1,9 +1,8 @@
 import React from 'react';
-import data from '../../utils/logements.json';
 import styles from './Gallery.module.css';
 import Card from '../Card/Card';
 
-const Gallery = () => {
+const Gallery = ({ data }) => {
   return (
     <div className={styles.Gallery}>
       {data.map((item) => (
@@ -11,8 +10,7 @@ const Gallery = () => {
           key={item.id} 
           id={item.id}
           title={item.title}
-          cover={item.cover}
-          
+          cover={item.cover}  
         />
       ))}
     </div>
@@ -20,3 +18,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

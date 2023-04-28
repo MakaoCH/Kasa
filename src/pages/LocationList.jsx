@@ -6,13 +6,17 @@ import Rating from '../components/Rating/Rating';
 import Host from '../components/Host/Host';
 import Tags from '../components/Tags/Tags';
 import Collapse from '../components/Collapse/Collapse';
-import styles from './LocationList.module.css'
+import styles from './LocationList.module.css';
 
+
+
+
+  
 const LocationsList = () => {
   const { id } = useParams();
   const accommodation = data.find(item => item.id === id) || {};
-  const { pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
-  const hostData = accommodation.host || {};
+  const { host = "", pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
+  
 
   return (
     <div>
@@ -27,7 +31,7 @@ const LocationsList = () => {
 
         <div className={styles.ratingHost}>
           {rating && <Rating rating={parseInt(rating)} />}
-          <Host name={hostData.name} picture={hostData.picture} />
+          <Host name={host.name} picture={host.picture} />
         </div>
       
       </div>

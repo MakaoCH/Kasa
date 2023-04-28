@@ -7,8 +7,17 @@ header {
     justify-content: space-between;
     margin: auto;
 }
-.Header img {
-    width: 100%;
+
+header img {
+    max-width: 100%;
     max-width: 200px;
-    height: auto; 
-}
+    height: auto;
+  
+  }
+
+  @media screen and (max-width: 650px) {
+    header img {
+      max-width: 150px; 
+      
+    }
+  }

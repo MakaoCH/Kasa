@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Slideshow.module.css';
 import arrow from '../../assets/arrow-slide.png';
 
@@ -19,7 +19,7 @@ const Slideshow = ({ pictures }) => {
 
   return (
     <div className={styles.slideshow}>
-      <div className={styles.slideWrapper}>
+      
         {images.map((image, index) => (
           <img
             key={index}
@@ -35,7 +35,7 @@ const Slideshow = ({ pictures }) => {
             <div className={styles.slideNumber}>{currentImage + 1}/{images.length}</div>
           </>
         }
-      </div>
+      
     </div>
   );
   
