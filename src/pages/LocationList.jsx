@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../components/Slideshow/Slideshow';
 import Rating from '../components/Rating/Rating';
 import Host from '../components/Host/Host';
@@ -11,9 +11,14 @@ import useFetch from '../utils/useFetch';
 const LocationsList = () => {
   const { id } = useParams();
   const { data } = useFetch(`/logements.json`);
-  console.log(data);
+  const navigate = useNavigate();
+
   const accommodation = data.find(LocationsList => LocationsList.id === id) || {};
-  
+
+  if (!accommodation.id) {
+    navigate('/error');
+    return null;
+  }
 
   const { host = "", pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
 
@@ -45,6 +50,8 @@ const LocationsList = () => {
 };
 
 export default LocationsList;
+
+
 
 
 
