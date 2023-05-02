@@ -1,26 +1,25 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Slideshow from '../components/Slideshow/Slideshow';
-import data from '../utils/logements.json';
 import Rating from '../components/Rating/Rating';
 import Host from '../components/Host/Host';
 import Tags from '../components/Tags/Tags';
 import Collapse from '../components/Collapse/Collapse';
 import styles from './LocationList.module.css';
+import useFetch from '../utils/useFetch';
 
-
-
-
-  
 const LocationsList = () => {
   const { id } = useParams();
-  const accommodation = data.find(item => item.id === id) || {};
-  const { host = "", pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
+  const { data } = useFetch(`/logements.json`);
+  console.log(data);
+  const accommodation = data.find(LocationsList => LocationsList.id === id) || {};
   
+
+  const { host = "", pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
 
   return (
     <div>
-      <Slideshow key={id} id={id} pictures={pictures} />
+      <Slideshow  pictures={pictures} />
 
       <div className={styles.blockUnderSlide}>
         <div className={styles.titleLocationTag}>
@@ -46,6 +45,7 @@ const LocationsList = () => {
 };
 
 export default LocationsList;
+
 
 
 
