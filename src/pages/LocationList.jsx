@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../components/Slideshow/Slideshow';
 import Rating from '../components/Rating/Rating';
@@ -10,18 +10,20 @@ import useFetch from '../utils/useFetch';
 
 const LocationsList = () => {
   const { id } = useParams();
-  const { data } = useFetch(`/logements.json`);
+  const { data  } = useFetch('/logements.json');
   const navigate = useNavigate();
 
   const accommodation = data.find(LocationsList => LocationsList.id === id) || {};
-
-  if (!accommodation.id) {
-    navigate('/error');
-    return null;
-  }
+  console.log(accommodation);
 
   const { host = "", pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
 
+  useEffect(() => {
+    if (accommodation.id === null) {
+      navigate('/Error');
+    }
+    }, [accommodation.id, navigate]);
+  
   return (
     <div>
       <Slideshow  pictures={pictures} />
@@ -30,21 +32,33 @@ const LocationsList = () => {
         <div className={styles.titleLocationTag}>
           <h1>{title}</h1>
           <p>{location}</p>
-          <Tags tags={tags} />
+          <Tags 
+            tags={tags} />
         </div>
 
         <div className={styles.ratingHost}>
-          {rating && <Rating rating={parseInt(rating)} />}
-          <Host name={host.name} picture={host.picture} />
+          {rating && <Rating 
+            rating={parseInt(rating)} 
+        />}
+          <Host 
+            name={host.name} 
+            picture={host.picture} 
+          />
         </div>
-      
       </div>
       
       <div className={styles.collapseLocationList}>
-        <Collapse title="Description" content={description} />
-        <Collapse title="Equipements" content={equipments.map(equipement => <li key={equipement}>{equipement}</li>)} />
+        <Collapse 
+          title="Description" 
+          content={description} 
+        />
+        <Collapse 
+          title="Equipements" 
+          content={equipments.map(equipement => 
+          <li className={styles.LiLocationsList} key={equipement}>{equipement}
+          </li>)} 
+        />
       </div>
-
     </div>
   );
 };

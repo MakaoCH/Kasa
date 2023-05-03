@@ -43,17 +43,15 @@
 }
 
 
-li {
-    list-style-type: none;
+.LiLocationsList {
+    margin-left: 5px;
   }
 
 
   @media screen and (max-width: 650px) {
     .blockUnderSlide {
         display: flex;
-        flex-direction: column;
-      
-        
+        flex-direction: column;  
     }
     .ratingHost {
         display: flex;
@@ -64,6 +62,10 @@ li {
         display: flex;
         flex-direction: column;
       }
+      .LiLocationsList {
+        text-transform: none;
+      }
+    
   }
 
 

@@ -4,11 +4,11 @@ import useFetch from '../utils/useFetch';
 
 const HomePage = () => {
   
-  const { data, hasError, isLoading } = useFetch("./logements.json");
+  const { data, error, isLoading } = useFetch("./logements.json");
   return (
     <div><Gallery
       data={data}
-      hasError={hasError}
+      error={error}
       isLoading={isLoading}
       />
     </div>

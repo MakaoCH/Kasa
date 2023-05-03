@@ -9,7 +9,16 @@
     font-size: 14px;
     padding: 5px 22px;
     border-radius: 10px;
-    margin-right: 10px;
-
+    margin: 5px;
   }
-  
+
+  @media screen and (max-width: 650px) {
+    .tagText {
+      font-size: 11px;
+      padding: 3px 20px;
+    }
+    .tags {
+      flex-wrap: wrap;
+    }
+    
+  }
