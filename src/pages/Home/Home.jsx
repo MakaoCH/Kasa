@@ -1,6 +1,6 @@
 import React from 'react';
-import Gallery from '../components/Gallery/Gallery';
-import useFetch from '../utils/useFetch';
+import Gallery from '../../components/Gallery/Gallery';
+import useFetch from '../../utils/useFetch';
 
 const HomePage = () => {
   

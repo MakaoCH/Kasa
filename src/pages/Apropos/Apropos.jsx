@@ -1,5 +1,5 @@
 import React from 'react';
-import Collapse from '../components/Collapse/Collapse';
+import Collapse from '../../components/Collapse/Collapse';
 import styles from './Apropos.module.css';
 
 const Apropos = () => {

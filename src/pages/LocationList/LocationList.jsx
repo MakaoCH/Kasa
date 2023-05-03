@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Slideshow from '../components/Slideshow/Slideshow';
-import Rating from '../components/Rating/Rating';
-import Host from '../components/Host/Host';
-import Tags from '../components/Tags/Tags';
-import Collapse from '../components/Collapse/Collapse';
+import Slideshow from '../../components/Slideshow/Slideshow';
+import Rating from '../../components/Rating/Rating';
+import Host from '../../components/Host/Host';
+import Tags from '../../components/Tags/Tags';
+import Collapse from '../../components/Collapse/Collapse';
 import styles from './LocationList.module.css';
-import useFetch from '../utils/useFetch';
+import useFetch from '../../utils/useFetch';
 
 const LocationsList = () => {
   const { id } = useParams();

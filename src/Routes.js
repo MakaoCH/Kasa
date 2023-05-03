@@ -1,8 +1,8 @@
 import { Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
-import Location from "./pages/LocationList";
-import Apropos from './pages/Apropos';
-import Error from './pages/Error';
+import Home from "./pages/Home/Home";
+import Location from "./pages/LocationList/LocationList";
+import Apropos from './pages/Apropos/Apropos';
+import Error from './pages/Error/Error';
 import Layout from './components/Layout/Layout';
 
 
