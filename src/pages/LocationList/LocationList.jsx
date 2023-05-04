@@ -12,60 +12,29 @@ const LocationsList = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useFetch('/logements.json');
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+      if (isLoading) {
+        return <div>Loading...</div>;
+      }
 
-  if (error) {
-    return <div>Quelque chose s'est mal passé...</div>;
-  }
+      if (error) {
+        return <div>Quelque chose s'est mal passé...</div>;
+      }
 
-  const accommodation = data.find(location => location.id === id);
-  console.log(accommodation);
+      const accommodation = data.find(location => location.id === id);
+      console.log(accommodation);
 
-  if (!accommodation) {
-    return <Navigate to="/Error" />;
-  }
+      if (!accommodation) {
+        return <Navigate to="/Error" />;
+      }
 
-  let host = "";
-  if (accommodation && accommodation.host && accommodation.host.name) {
-    host = accommodation.host.name;
-  }
-  
-  let pictures = [];
-  if (accommodation && accommodation.pictures) {
-    pictures = accommodation.pictures;
-  }
-  
-  let title = "";
-  if (accommodation && accommodation.title) {
-    title = accommodation.title;
-  }
-  
-  let location = "";
-  if (accommodation && accommodation.location) {
-    location = accommodation.location;
-  }
-  
-  let rating = null;
-  if (accommodation && accommodation.rating) {
-    rating = parseInt(accommodation.rating);
-  }
-  
-  let tags = [];
-  if (accommodation && accommodation.tags) {
-    tags = accommodation.tags;
-  }
-  
-  let description = {};
-  if (accommodation && accommodation.description) {
-    description = accommodation.description;
-  }
-  
-  let equipments = [];
-  if (accommodation && accommodation.equipments) {
-    equipments = accommodation.equipments;
-  }
+  const host = accommodation?.host?.name ?? "";
+  const pictures = accommodation?.pictures ?? [];
+  const title = accommodation?.title ?? "";
+  const location = accommodation?.location ?? "";
+  const rating = parseInt(accommodation?.rating) ?? null;
+  const tags = accommodation?.tags ?? [];
+  const description = accommodation?.description ?? {};
+  const equipments = accommodation?.equipments ?? [];
   
  
   return (
