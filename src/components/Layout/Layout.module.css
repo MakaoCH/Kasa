@@ -14,10 +14,10 @@ header {
 
 @media screen and (max-width: 650px) {
     .layoutMain {
-        width: 100%;
+        width: 95%;
         margin: auto;
     }
     header {
-        width: 100%;
+        width: 95%;
     }
   }

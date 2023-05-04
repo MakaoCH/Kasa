@@ -61,10 +61,18 @@
     .collapseLocationList {
         display: flex;
         flex-direction: column;
-      }
-      .LiLocationsList {
-        text-transform: none;
-      }
+    }
+    .LiLocationsList {
+    text-transform: none;
+    }
+    .titleLocationTag h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .titleLocationTag p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
     
   }
 

@@ -9,7 +9,7 @@
     font-size: 14px;
     padding: 5px 22px;
     border-radius: 10px;
-    margin: 5px;
+    margin: 5px 5px 5px 0px;
   }
 
   @media screen and (max-width: 650px) {

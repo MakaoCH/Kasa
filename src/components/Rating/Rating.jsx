@@ -9,7 +9,7 @@ const Rating = ({ rating }) => {
 
   for (let i = 1; i <= numberStars; i++) {
     const starImage = i <= rating ? starRed : starGrey;
-    stars.push(<span key={i} className={styles.star}><img src={starImage} alt="star" /></span>);
+    stars.push(<span key={i} ><img className={styles.star} src={starImage} alt="star" /></span>);
   }
 
   return (

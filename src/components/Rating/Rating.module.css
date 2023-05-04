@@ -1,14 +1,19 @@
-.star  {
-  padding: 7px;
- 
+.starContainer  {
+  text-align: right;
 }
+.star  {
+  padding-left: 7px;
+  width: 24px;
+  height: auto;
+}
+
   
 @media screen and (max-width: 450px) {
   .star-container {
     white-space: nowrap;
   }
   .star  {
-    padding: 5px;
-    width: auto;   
+    padding: 2px;
+    width: 13px;
   }
 }
