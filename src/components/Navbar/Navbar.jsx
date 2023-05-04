@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
-    const location = useLocation(); // Récupérer la route active avec useLocation
+    const location = useLocation();
     const activeRoute = location.pathname;
 
     return (

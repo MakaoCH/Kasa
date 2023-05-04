@@ -18,7 +18,7 @@ const Host = ({ name, picture }) => {
           {lastName}
         </p>
       </div>
-      {picture && <img className={styles.hostImg} src={picture} alt={name} />}
+      <img className={styles.hostImg} src={picture} alt={name} />
     </div>
   );
 };
