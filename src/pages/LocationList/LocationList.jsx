@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow/Slideshow';
 import Rating from '../../components/Rating/Rating';
 import Host from '../../components/Host/Host';
@@ -10,20 +10,64 @@ import useFetch from '../../utils/useFetch';
 
 const LocationsList = () => {
   const { id } = useParams();
-  const { data  } = useFetch('/logements.json');
-  const navigate = useNavigate();
+  const { data, isLoading, error } = useFetch('/logements.json');
 
-  const accommodation = data.find(LocationsList => LocationsList.id === id) || {};
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Quelque chose s'est mal passé...</div>;
+  }
+
+  const accommodation = data.find(location => location.id === id);
   console.log(accommodation);
 
-  const { host = "", pictures = [], title = "", location = "", rating = null, tags = [], description = {}, equipments = [] } = accommodation;
+  if (!accommodation) {
+    return <Navigate to="/Error" />;
+  }
 
-  useEffect(() => {
-    if (accommodation.id === null) {
-      navigate('/Error');
-    }
-    }, [accommodation.id, navigate]);
+  let host = "";
+  if (accommodation && accommodation.host && accommodation.host.name) {
+    host = accommodation.host.name;
+  }
   
+  let pictures = [];
+  if (accommodation && accommodation.pictures) {
+    pictures = accommodation.pictures;
+  }
+  
+  let title = "";
+  if (accommodation && accommodation.title) {
+    title = accommodation.title;
+  }
+  
+  let location = "";
+  if (accommodation && accommodation.location) {
+    location = accommodation.location;
+  }
+  
+  let rating = null;
+  if (accommodation && accommodation.rating) {
+    rating = parseInt(accommodation.rating);
+  }
+  
+  let tags = [];
+  if (accommodation && accommodation.tags) {
+    tags = accommodation.tags;
+  }
+  
+  let description = {};
+  if (accommodation && accommodation.description) {
+    description = accommodation.description;
+  }
+  
+  let equipments = [];
+  if (accommodation && accommodation.equipments) {
+    equipments = accommodation.equipments;
+  }
+  
+ 
   return (
     <div>
       <Slideshow  pictures={pictures} />
@@ -41,9 +85,10 @@ const LocationsList = () => {
             rating={parseInt(rating)} 
         />}
           <Host 
-            name={host.name} 
-            picture={host.picture} 
+            name={host} 
+            picture={accommodation.host.picture} 
           />
+
         </div>
       </div>
       
@@ -64,10 +109,3 @@ const LocationsList = () => {
 };
 
 export default LocationsList;
-
-
-
-
-
-
-
