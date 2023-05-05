@@ -29,9 +29,14 @@
     cursor: pointer;
   }
   
+  .arrow:hover {
+    cursor: pointer;
+  }
   .rotateArrow {
     transform: rotate(-180deg);
   }
+
+  
   
   .collapseContent {
     display: flex;

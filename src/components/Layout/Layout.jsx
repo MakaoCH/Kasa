@@ -7,11 +7,12 @@ import styles from './Layout.module.css';
 
 const Layout = () => {
     return (
+        
         <div className={styles.layout}>
             <Header />
-            <main className={styles.layoutMain}>
-                <Outlet />
-            </main>
+                <main className={styles.layoutMain}>
+                    <Outlet />
+                </main>
             <Footer /> 
         </div>
        

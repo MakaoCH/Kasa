@@ -6,8 +6,10 @@ import styles from './Footer.module.css'
 const Footer = () => {
     return (
         <div className={styles.Footer}>
-             <img src={Logo} alt="Logo" /> {/* Utilisation de l'image importée */}
-             <p>© 2020 Kasa. All rights reserved</p>
+            <footer>
+                <img src={Logo} alt="Logo" /> {/* Utilisation de l'image importée */}
+                <p>© 2020 Kasa. All rights reserved</p>
+            </footer>
         </div>
     );
 };
