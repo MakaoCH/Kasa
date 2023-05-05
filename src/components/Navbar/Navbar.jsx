@@ -10,7 +10,7 @@ const Navbar = () => {
             <nav className={styles.Navbar}>
                 <ul>
                     <li className={activeRoute === '/' ? styles.active : ''}><Link to="/">Accueil</Link></li>
-                    <li className={activeRoute === '/Apropos' ? styles.active : ''}><Link to="/Apropos">A propos</Link></li>
+                    <li className={activeRoute === '/About' ? styles.active : ''}><Link to="/About">A propos</Link></li>
                 </ul>
             </nav>
         </div>

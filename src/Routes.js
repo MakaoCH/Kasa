@@ -1,7 +1,7 @@
 import { Routes, Route} from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Location from "./pages/LocationList/LocationList";
-import Apropos from './pages/Apropos/Apropos';
+import About from './pages/About/About';
 import Error from './pages/Error/Error';
 import Layout from './components/Layout/Layout';
 
@@ -14,7 +14,7 @@ function App() {
           <Route element={<Layout/>}>
            
             <Route path='/' element={<Home/>}/>
-            <Route path='/Apropos' element={<Apropos/>}/>
+            <Route path='/About' element={<About/>}/>
             <Route path='/LocationList/:id' element={<Location/>}/>
             
             <Route path='*' element={<Error/>}/>

@@ -1,12 +1,12 @@
 import React from 'react';
 import Collapse from '../../components/Collapse/Collapse';
-import styles from './Apropos.module.css';
+import styles from './About.module.css';
 import bannerApropos from '../../assets/Banner-about.png';
 import BannerComponent from '../../components/Banner/Banner';
 
-const Apropos = () => {
+const About = () => {
 
-    const AproposData = [
+    const AboutData = [
 		{
 			"id": "1",
 			"title": "Fiabilité",
@@ -33,7 +33,7 @@ const Apropos = () => {
 			
             <BannerComponent imageUrl={bannerApropos} />
                    
-			{AproposData.map(data => (
+			{AboutData.map(data => (
 		  		<div key={data.id} className={styles.collapse}>
 					<Collapse 
 			  			title={<h3 className={styles.title}>{data.title}</h3>} 
@@ -45,4 +45,4 @@ const Apropos = () => {
 	);
   };
 
-export default Apropos;
+export default About;
