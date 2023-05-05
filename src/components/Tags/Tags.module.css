@@ -14,7 +14,7 @@
 
   @media screen and (max-width: 650px) {
     .tagText {
-      font-size: 11px;
+      font-size: 12px;
       padding: 3px 20px;
     }
     .tags {

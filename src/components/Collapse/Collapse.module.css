@@ -48,6 +48,9 @@
   }
   
   @media screen and (max-width: 650px) {
+    .collapseTitle {
+      height: 30px;
+    }
     .collapseTitle img {
       width: 16px;
     }

@@ -7,7 +7,7 @@
     border-radius: 50%;
     overflow: hidden;
     width: 64px; 
-    height: 64px;
+    height: auto;
 }
   
 .hostName {
@@ -21,11 +21,11 @@
 
 @media screen and (max-width: 650px) {
     .hostImg {
-        width: 32px; 
-        height: 32px;
+        width: 36px; 
+        
     }
     .hostName {
-        font-size: 12px;       
+        font-size: 14px;       
     }
   }
   
