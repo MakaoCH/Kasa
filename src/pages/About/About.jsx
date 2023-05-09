@@ -2,7 +2,7 @@ import React from 'react';
 import Collapse from '../../components/Collapse/Collapse';
 import styles from './About.module.css';
 import bannerApropos from '../../assets/Banner-about.png';
-import BannerComponent from '../../components/Banner/Banner';
+import Banner from '../../components/Banner/Banner';
 
 const About = () => {
   const AboutData = [
@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div>
       <div>
-        <BannerComponent imageUrl={bannerApropos} />
+        <Banner imageUrl={bannerApropos} />
       </div>
 
       <div className={styles.collapse}>
