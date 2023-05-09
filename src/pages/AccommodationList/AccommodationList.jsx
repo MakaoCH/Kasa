@@ -5,7 +5,7 @@ import Rating from '../../components/Rating/Rating';
 import Host from '../../components/Host/Host';
 import Tags from '../../components/Tags/Tags';
 import Collapse from '../../components/Collapse/Collapse';
-import styles from './LocationList.module.css';
+import styles from './AccommodationList.module.css';
 import useFetch from '../../utils/useFetch';
 
 const LocationsList = () => {
@@ -20,7 +20,7 @@ const LocationsList = () => {
         return <div>Quelque chose s'est mal passé...</div>;
       }
 
-      const accommodation = data.find(location => location.id === id);
+      const accommodation = data.find(accommodation => accommodation.id === id);
       console.log(accommodation);
 
       if (!accommodation) {
