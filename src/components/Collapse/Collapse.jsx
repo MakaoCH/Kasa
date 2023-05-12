@@ -11,7 +11,7 @@ const Collapse = ({title, content}) => {
     <div className={styles.collapse}>
 
       <div className={styles.collapseBlock}>
-        <div className={`${styles.collapseTitle}`} onClick={() => setToggle(!toggle)}>
+        <div className={styles.collapseTitle} onClick={() => setToggle(!toggle)}>
           {title}
             <img className={toggle ? `${styles.collapseArrow} ${styles.rotateArrow}` : `${styles.arrow}`} 
             src={arrow} 
@@ -19,7 +19,7 @@ const Collapse = ({title, content}) => {
         </div>
       </div>
       
-        {toggle && <div className={`${styles.collapseContent}`}>{content}</div>}
+        {toggle && <div className={styles.collapseContent}>{content}</div>}
       
     </div>
   );
