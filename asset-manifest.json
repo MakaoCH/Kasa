@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-deploy/static/css/main.7e4c87f4.css",
-    "main.js": "/react-deploy/static/js/main.4342e448.js",
-    "static/media/Banner-about.png": "/react-deploy/static/media/Banner-about.abab3f12f4cb82f1dfa1.png",
-    "static/media/Banner.png": "/react-deploy/static/media/Banner.d00ae7dd3ef927bb988d.png",
-    "index.html": "/react-deploy/index.html",
-    "main.7e4c87f4.css.map": "/react-deploy/static/css/main.7e4c87f4.css.map",
-    "main.4342e448.js.map": "/react-deploy/static/js/main.4342e448.js.map"
+    "main.css": "/kasa/static/css/main.7e4c87f4.css",
+    "main.js": "/kasa/static/js/main.f740efc2.js",
+    "static/media/Banner-about.png": "/kasa/static/media/Banner-about.abab3f12f4cb82f1dfa1.png",
+    "static/media/Banner.png": "/kasa/static/media/Banner.d00ae7dd3ef927bb988d.png",
+    "index.html": "/kasa/index.html",
+    "main.7e4c87f4.css.map": "/kasa/static/css/main.7e4c87f4.css.map",
+    "main.f740efc2.js.map": "/kasa/static/js/main.f740efc2.js.map"
   },
   "entrypoints": [
     "static/css/main.7e4c87f4.css",
-    "static/js/main.4342e448.js"
+    "static/js/main.f740efc2.js"
   ]
 }
