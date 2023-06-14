@@ -3,6 +3,7 @@
   }
   
   .tagText {
+    text-align: center;
     background-color:#FF6060;
     color: white;
     font-weight: 500;
